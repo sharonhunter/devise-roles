@@ -1,2 +1,15 @@
-<h3>Welcome</h3>
-<p><%= link_to 'Users:', users_path %> <%= User.count %> registered</p>
+<% if user_signed_in? %>
+	<% case current_user.role %>
+	<% when 'user' %>
+		<h3>Welcome, User</h3>
+	<% when 'admin' %>
+		<h3>Welcome, Administrator</h3>
+	<% when 'vip' %>
+		<h3>Welcome, VIP!</h3>
+	<% end %>
+
+<% else %>
+	<h3>Welcome</h3>
+<% end %>
+
+<p><%= link_to 'Users:', users_path %> <%= User.count %> registered.</p>
