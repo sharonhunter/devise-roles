@@ -33,13 +33,15 @@ img {
   }
 // apply styles to HTML elements
 // to make views framework-neutral
+
 main {
   @extend .container;
   background-color: #eee;
-  padding-bottom: 80px;
+  padding-bottom: 20px;
   width: 100%;
   margin-top: 51px; // accommodate the navbar
-  }
+}
+
 section {
   @extend .row;
   margin-top: 20px;
@@ -53,11 +55,14 @@ section {
   max-width: 320px;
   margin: 0 auto;
 }
+
 .authform form {
   @extend .well;
   @extend .well-lg;
   padding-bottom: 40px;
+  background-color:#bbb;
 }
+
 .authform .right {
   float: right !important;
 }
